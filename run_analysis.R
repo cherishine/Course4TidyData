@@ -44,7 +44,7 @@ data.all <- bind_rows(data.test, data.train)
 data.summary <- data.all %>%
   group_by(subject, activity) %>%
   summarise(across(1:66, mean))
-write.table(data.summary, "data_summary.txt")
+write.table(data.summary, "data_summary.txt", row.name=FALSE)
 
 
 
